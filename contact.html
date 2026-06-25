@@ -38,29 +38,47 @@
 </header>
 <script>document.getElementById('nav-cta').style.display='inline-block';</script>
 
-<!-- CONTACT HERO WITH PHOTO -->
-<section style="display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 64px);" class="contact-split">
-  <div style="position:relative;overflow:hidden;background:var(--bg2);">
-    <img src="fatwell.jpg" alt="Fatwell Mugadia" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:grayscale(1) contrast(1.08);"/>
-    <div style="position:absolute;inset:0;background:linear-gradient(150deg,rgba(212,167,44,.2),rgba(13,12,14,.65));mix-blend-mode:multiply;"></div>
+<!-- CONTACT LAYOUT -->
+<section class="contact-split">
+  <!-- IMAGE -->
+  <div class="contact-img">
+    <img src="fatwell.jpg" alt="Fatwell Mugadia"/>
   </div>
-  <div style="background:var(--bg2);padding:64px 48px;display:flex;flex-direction:column;justify-content:center;">
+
+  <!-- CONTENT -->
+  <div class="contact-content">
     <p class="section-label reveal">Get In Touch</p>
     <h1 class="display reveal" style="font-size:clamp(2rem,5vw,3rem);margin-bottom:20px;">Let's <em>connect.</em></h1>
-    <p class="body-text reveal" style="margin-bottom:40px;">Whether it's a message of encouragement, a ministry enquiry, or a booking — reach out directly.</p>
+    <p class="body-text reveal" style="margin-bottom:36px;">Whether it's a message of encouragement, a ministry enquiry, or a booking — reach out directly.</p>
 
-    <div class="contact-info reveal">
-      <div class="ci-row">
-        <label>Email</label>
-        <a href="mailto:mugadiafatwell@gmail.com" class="val" style="display:block;color:var(--cream);transition:color .2s;">mugadiafatwell@gmail.com</a>
-      </div>
-      <div class="ci-row">
-        <label>Phone / WhatsApp</label>
-        <a href="tel:0703696287" class="val" style="display:block;color:var(--cream);transition:color .2s;">0703 696 287</a>
-      </div>
+    <!-- ICON CONTACT CARDS -->
+    <div class="contact-cards reveal">
+      <a href="mailto:mugadiafatwell@gmail.com" class="contact-card">
+        <div class="contact-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+        </div>
+        <div class="contact-card-text">
+          <span class="contact-card-label">Email</span>
+          <span class="contact-card-value">mugadiafatwell@gmail.com</span>
+        </div>
+      </a>
+      <a href="tel:0703696287" class="contact-card">
+        <div class="contact-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6.18 6.18l.82-.82a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7a2 2 0 0 1 1.72 2.1z"/>
+          </svg>
+        </div>
+        <div class="contact-card-text">
+          <span class="contact-card-label">Phone / WhatsApp</span>
+          <span class="contact-card-value">0703 696 287</span>
+        </div>
+      </a>
     </div>
 
-    <form action="mailto:mugadiafatwell@gmail.com" method="post" enctype="text/plain" class="reveal">
+    <form action="mailto:mugadiafatwell@gmail.com" method="post" enctype="text/plain" class="reveal" style="margin-top:32px;">
       <div class="form-row">
         <div class="field"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="Jane Doe" required/></div>
         <div class="field"><label for="email">Your Email</label><input type="email" id="email" name="email" placeholder="jane@example.com" required/></div>
@@ -83,10 +101,98 @@
 </section>
 
 <style>
+/* Contact page layout */
+.contact-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+.contact-img {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg2);
+  aspect-ratio: 3/4;
+}
+.contact-img img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+  /* Natural color — no filter */
+}
+.contact-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(13,12,14,0) 60%, rgba(13,12,14,0.4) 100%);
+}
+.contact-content {
+  background: var(--bg2);
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+/* Contact icon cards */
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border: 1px solid var(--line);
+  background: rgba(240,234,216,0.03);
+  text-decoration: none;
+  transition: border-color .2s, background .2s;
+}
+.contact-card:hover {
+  border-color: var(--gold);
+  background: rgba(212,167,44,0.06);
+}
+.contact-card-icon {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: border-color .2s;
+}
+.contact-card:hover .contact-card-icon {
+  border-color: var(--gold);
+}
+.contact-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.contact-card-label {
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.contact-card-value {
+  font-size: 14px;
+  color: var(--cream);
+  font-weight: 500;
+}
+
 @media (max-width: 767px) {
-  .contact-split { grid-template-columns: 1fr !important; }
-  .contact-split > div:first-child { height: 52vw; }
-  .contact-split > div:last-child { padding: 36px 24px !important; }
+  .contact-split { grid-template-columns: 1fr; }
+  .contact-img { aspect-ratio: 4/3; }
+  .contact-content { padding: 36px 24px; }
 }
 </style>
 
