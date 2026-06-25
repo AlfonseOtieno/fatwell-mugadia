@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact — Fatwell Mugadia</title>
+<meta name="description" content="Get in touch with Fatwell Mugadia — gospel minister and songwriter based in Nairobi, Kenya."/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="n">Fatwell Mugadia</span>
+      <span class="s">Gospel Artist · Nairobi, Kenya</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a href="music.html" class="btn-gold" style="display:none;" id="nav-cta">Stream Now</a>
+      <button class="burger" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+    <div class="mob-cta"><a href="music.html" class="btn-gold">Stream Now</a></div>
+  </nav>
+</header>
+<script>document.getElementById('nav-cta').style.display='inline-block';</script>
+
+<!-- CONTACT HERO WITH PHOTO -->
+<section style="display:grid;grid-template-columns:1fr 1fr;min-height:calc(100vh - 64px);" class="contact-split">
+  <div style="position:relative;overflow:hidden;background:var(--bg2);">
+    <img src="fatwell.jpg" alt="Fatwell Mugadia" style="width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:grayscale(1) contrast(1.08);"/>
+    <div style="position:absolute;inset:0;background:linear-gradient(150deg,rgba(212,167,44,.2),rgba(13,12,14,.65));mix-blend-mode:multiply;"></div>
+  </div>
+  <div style="background:var(--bg2);padding:64px 48px;display:flex;flex-direction:column;justify-content:center;">
+    <p class="section-label reveal">Get In Touch</p>
+    <h1 class="display reveal" style="font-size:clamp(2rem,5vw,3rem);margin-bottom:20px;">Let's <em>connect.</em></h1>
+    <p class="body-text reveal" style="margin-bottom:40px;">Whether it's a message of encouragement, a ministry enquiry, or a booking — reach out directly.</p>
+
+    <div class="contact-info reveal">
+      <div class="ci-row">
+        <label>Email</label>
+        <a href="mailto:mugadiafatwell@gmail.com" class="val" style="display:block;color:var(--cream);transition:color .2s;">mugadiafatwell@gmail.com</a>
+      </div>
+      <div class="ci-row">
+        <label>Phone / WhatsApp</label>
+        <a href="tel:0703696287" class="val" style="display:block;color:var(--cream);transition:color .2s;">0703 696 287</a>
+      </div>
+    </div>
+
+    <form action="mailto:mugadiafatwell@gmail.com" method="post" enctype="text/plain" class="reveal">
+      <div class="form-row">
+        <div class="field"><label for="name">Your Name</label><input type="text" id="name" name="name" placeholder="Jane Doe" required/></div>
+        <div class="field"><label for="email">Your Email</label><input type="email" id="email" name="email" placeholder="jane@example.com" required/></div>
+      </div>
+      <div class="field"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="What is this about?"/></div>
+      <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Write your message here..." required></textarea></div>
+      <button type="submit" class="btn-gold">Send Message</button>
+    </form>
+
+    <div class="reveal">
+      <p style="font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:36px;margin-bottom:12px;">Follow Fatwell</p>
+      <div class="social-links">
+        <a href="https://open.spotify.com/artist/1F5QsPxOxkbO9FEZFPH1hG" target="_blank" rel="noopener" class="social-link">Spotify</a>
+        <a href="https://youtube.com/channel/UCCWIqJ_wp1p1qu2kUFyd1ow" target="_blank" rel="noopener" class="social-link">YouTube</a>
+        <a href="https://music.apple.com/us/artist/fatwell-mugadia/1578324684" target="_blank" rel="noopener" class="social-link">Apple Music</a>
+        <a href="https://www.amazon.com/music/player/artists/B09B83XJFV/fatwell-mugadia" target="_blank" rel="noopener" class="social-link">Amazon Music</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@media (max-width: 767px) {
+  .contact-split { grid-template-columns: 1fr !important; }
+  .contact-split > div:first-child { height: 52vw; }
+  .contact-split > div:last-child { padding: 36px 24px !important; }
+}
+</style>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="fn">Fatwell Mugadia</span>
+        <p>Gospel minister and songwriter based in Nairobi, Kenya. Swahili worship music — songs of confession, surrender, and praise.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:mugadiafatwell@gmail.com">mugadiafatwell@gmail.com</a></li>
+          <li><a href="tel:0703696287">0703 696 287</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Fatwell Mugadia. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://open.spotify.com/artist/1F5QsPxOxkbO9FEZFPH1hG" target="_blank" rel="noopener">Spotify</a>
+        <a href="https://youtube.com/channel/UCCWIqJ_wp1p1qu2kUFyd1ow" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://music.apple.com/us/artist/fatwell-mugadia/1578324684" target="_blank" rel="noopener">Apple Music</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
