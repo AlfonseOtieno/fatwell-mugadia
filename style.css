@@ -31,8 +31,7 @@ button, input, textarea { font-family: inherit; }
 /* ─── NAV ─── */
 .nav {
   position: sticky; top: 0; z-index: 200;
-  background: rgba(13,12,14,0.92);
-  backdrop-filter: blur(12px);
+  background: rgba(13,12,14,0.97);
   border-bottom: 1px solid var(--line);
 }
 .nav-inner {
